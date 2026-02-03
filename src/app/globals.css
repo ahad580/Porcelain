@@ -81,6 +81,7 @@ body {
   z-index: 90;
   transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease, -webkit-backdrop-filter .25s ease
 }
+
 .navInner {
   display: flex;
   align-items: center;
@@ -215,7 +216,9 @@ body {
   margin-top: -18px;
   opacity: .92
 }
-html, body {
+
+html,
+body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -1223,6 +1226,7 @@ body::-webkit-scrollbar {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .productCard,
   .rgCard,
   .blogCard,
@@ -1465,6 +1469,7 @@ body::-webkit-scrollbar {
     grid-template-columns: 1fr
   }
 }
+
 .topNav {
   position: absolute;
   top: 12px;
@@ -1500,92 +1505,172 @@ body::-webkit-scrollbar {
   border-radius: 999px;
   padding: 10px 14px
 }
-@media (max-width:480px){
 
-  .heroTitleStack{
-    top:72px;
-    padding:0 1px
+@media (max-width:480px) {
+
+  .heroTitleStack {
+    top: 72px;
+    padding: 0 1px
   }
 
-  .heroTitlePorcelain{
-    font-size:50px;
-    letter-spacing:4px;
-    line-height:.95;
-    text-align:center
+  .heroTitlePorcelain {
+    font-size: 50px;
+    letter-spacing: 4px;
+    line-height: .95;
+    text-align: center
   }
 
-  .heroTitleSkin{
-    font-size:56px;
-    letter-spacing:4px;
-    line-height:.95;
-    text-align:center;
-    padding-right:0;
-    margin-top:-6px
+  .heroTitleSkin {
+    font-size: 56px;
+    letter-spacing: 4px;
+    line-height: .95;
+    text-align: center;
+    padding-right: 0;
+    margin-top: -6px
   }
 
-  .heroLeftCopy{
-    margin:150px 12px 8px;
-    max-width:100%
+  .heroLeftCopy {
+    margin: 150px 12px 8px;
+    max-width: 100%
   }
 
-  .heroKicker{
-    font-size:16px;
-    line-height:1.25;
-    margin-bottom:12px
+  .heroKicker {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 12px
   }
 
-  .heroBody{
-    font-size:11px;
-    line-height:1.6;
-    margin-bottom:14px
+  .heroBody {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 14px
   }
 
-  .heroCta{
-    font-size:11px;
-    padding:10px 14px
+  .heroCta {
+    font-size: 11px;
+    padding: 10px 14px
   }
 
-  .heroModelFrame{
-    height:380px
+  .heroModelFrame {
+    height: 380px
   }
 
 }
-@media (max-width:480px){
-  .heroModelWrap{
-    display:none
+
+@media (max-width:480px) {
+  .heroModelWrap {
+    display: none
   }
 }
-@media (max-width:480px){
 
-  .productCard{
-    width:88%;
-    margin:10px auto 0;
-    border-radius:14px
+@media (max-width:480px) {
+
+  .productCard {
+    width: 88%;
+    margin: 10px auto 0;
+    border-radius: 14px
   }
 
-  .productCardMedia{
-    height:110px
+  .productCardMedia {
+    height: 110px
   }
 
-  .productCardBody{
-    padding:10px
+  .productCardBody {
+    padding: 10px
   }
 
-  .productCardTitle{
-    font-size:11px
+  .productCardTitle {
+    font-size: 11px
   }
 
-  .productCardPrice{
-    font-size:10px
+  .productCardPrice {
+    font-size: 10px
   }
 
-  .productCardText{
-    font-size:9.5px;
-    line-height:1.45
+  .productCardText {
+    font-size: 9.5px;
+    line-height: 1.45
   }
 
-  .cardDots{
-    padding:6px 10px 10px
+  .cardDots {
+    padding: 6px 10px 10px
   }
 
+}
+
+.psLoadWrap {
+  position: relative;
+}
+
+.psLoadWrap.isLoading .pageShell {
+  filter: blur(16px);
+  transform: scale(1.01);
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pageShell {
+  transition: filter 600ms ease, opacity 600ms ease, transform 600ms ease;
+}
+
+.psLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  background: rgba(168, 197, 200, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 450ms ease;
+}
+
+.psLoader.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.psLoaderCard {
+  width: min(420px, calc(100% - 44px));
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.20);
+  padding: 26px 22px 20px;
+  text-align: center;
+}
+
+.psLoaderLogo {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.psLoaderSpin {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto 12px;
+  animation: psSpin 0.9s linear infinite;
+}
+
+@keyframes psSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.psLoaderText {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.80);
+  text-transform: uppercase;
 }
