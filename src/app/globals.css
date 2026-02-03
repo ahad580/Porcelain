@@ -408,7 +408,9 @@ body::-webkit-scrollbar {
   padding: 26px 22px 34px;
   color: #1b1b1b;
   border-top-left-radius: 18px;
-  border-top-right-radius: 18px
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 .rgGrid {
