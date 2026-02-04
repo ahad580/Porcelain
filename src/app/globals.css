@@ -1580,8 +1580,76 @@ body::-webkit-scrollbar {
     height: 380px;
   }
 
-  .heroModelWrap {
+  /* .heroModelWrap {
     display: none;
+  } */
+  @media (max-width: 480px) {
+    .heroModelWrap {
+      display: grid;
+      position: absolute;
+      left: auto;
+      right: -14px;
+      top: 108px;
+      transform: none;
+      width: 220px;
+      height: 360px;
+      z-index: 55;
+      pointer-events: none;
+      opacity: 0.98;
+    }
+
+    .heroModelFrame {
+      width: 220px;
+      height: 360px;
+      overflow: hidden;
+      border-radius: 26px;
+      filter: drop-shadow(0 18px 46px rgba(0, 0, 0, 0.16));
+      position: relative;
+    }
+
+    .heroModelImg {
+      object-fit: cover;
+      object-position: 56% 26%;
+      transform: scale(1.08);
+      -webkit-mask-image: linear-gradient(to bottom, #000 0 70%, rgba(0, 0, 0, 0.92) 76%, rgba(0, 0, 0, 0.35) 90%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0 70%, rgba(0, 0, 0, 0.92) 76%, rgba(0, 0, 0, 0.35) 90%, transparent 100%);
+    }
+
+    .heroModelFrame::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 46%;
+      background: linear-gradient(to bottom, rgba(168, 197, 200, 0), rgba(168, 197, 200, 0.65) 55%, rgba(168, 197, 200, 0.96));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .heroLeftCopy {
+      max-width: 240px;
+      z-index: 70;
+    }
+
+    .productCard {
+      z-index: 90;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .heroModelWrap {
+      right: -22px;
+      top: 104px;
+      width: 200px;
+      height: 340px;
+    }
+
+    .heroModelFrame {
+      width: 200px;
+      height: 340px;
+    }
   }
 
   .productCard {
@@ -1772,5 +1840,37 @@ body::-webkit-scrollbar {
     top: -120px;
     width: 320px;
     height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitleStack {
+    z-index: 120;
+  }
+
+  .heroLeftCopy {
+    z-index: 130;
+  }
+
+  .heroModelWrap {
+    z-index: 40;
+  }
+
+  .heroModelFrame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        rgba(168, 197, 200, 0.75) 0%,
+        rgba(168, 197, 200, 0.35) 45%,
+        rgba(168, 197, 200, 0) 70%);
+    pointer-events: none;
+  }
+
+  .heroKicker,
+  .heroBody,
+  .heroTitlePorcelain,
+  .heroTitleSkin {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   }
 }
