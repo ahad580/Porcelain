@@ -1,26 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,200;6..96,300;6..96,400&family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%
+  height: 100%;
 }
 
 body {
   background: #a8c5c8;
-  font-family: Montserrat, system-ui, sans-serif
+  font-family: Montserrat, system-ui, sans-serif;
 }
 
 .pageShell {
   min-height: 100vh;
   background: #a8c5c8;
   color: #fff;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .heroSection {
@@ -28,24 +29,24 @@ body {
   padding: 20px 22px 28px;
   display: flex;
   justify-content: center;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .heroScaler {
   width: 100%;
-  max-width: 1380px
+  max-width: 1380px;
 }
 
 .heroFrame {
   width: 100%;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, .22);
-  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 16px 60px rgba(0, 0, 0, .14), inset 0 0 0 1px rgba(255, 255, 255, .06)
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .heroFrame::before {
@@ -53,8 +54,10 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(900px 520px at 18% 28%, rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 55%), radial-gradient(700px 520px at 86% 58%, rgba(255, 255, 255, .14), rgba(255, 255, 255, 0) 55%), linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, 0));
-  opacity: .85
+  background: radial-gradient(900px 520px at 18% 28%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 55%),
+    radial-gradient(700px 520px at 86% 58%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  opacity: 0.85;
 }
 
 .heroFrame::after {
@@ -63,158 +66,14 @@ body {
   inset: 0;
   pointer-events: none;
   border-radius: 28px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12)
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .heroFrameInner {
   position: relative;
   width: 100%;
-  padding: 18px 18px 26px;
-  min-height: 0
-}
-
-.topNav {
-  position: absolute;
-  top: 12px;
-  left: 18px;
-  right: 18px;
-  z-index: 90;
-  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease, -webkit-backdrop-filter .25s ease
-}
-
-.navInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px
-}
-
-.brandMark {
-  font-family: "Bodoni Moda", serif;
-  letter-spacing: 2px;
-  font-size: 16px;
-  font-weight: 300;
-  opacity: .95
-}
-
-.navLinks {
-  display: flex;
-  gap: 18px;
-  align-items: center
-}
-
-.navLinks a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, .92);
-  font-size: 12px;
-  letter-spacing: 1.2px;
-  font-weight: 400
-}
-
-.navLinks a:hover {
-  color: #000
-}
-
-.navActions {
-  display: flex;
-  gap: 10px;
-  align-items: center
-}
-
-.navIconBtn {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, .42);
-  display: grid;
-  place-items: center;
-  cursor: pointer
-}
-
-.navIcon {
-  width: 16px;
-  height: 16px;
-  fill: #fff
-}
-
-.navIconBtn:hover {
-  border-color: #000
-}
-
-.navIconBtn:hover .navIcon {
-  fill: #000
-}
-
-.bgOrnament {
-  position: absolute;
-  left: -8px;
-  top: -8px;
-  width: 540px;
-  height: 340px;
-  z-index: 6;
-  pointer-events: none;
-  opacity: .9
-}
-
-.bgOrnamentImg {
-  object-fit: contain;
-  object-position: left top;
-  filter: drop-shadow(0 10px 40px rgba(0, 0, 0, .08))
-}
-
-.ornamentalP {
-  position: absolute;
-  left: -190px;
-  top: 14px;
-  width: 900px;
-  height: 640px;
-  z-index: 8;
-  pointer-events: none;
-  opacity: .62
-}
-
-.ornamentalPImg {
-  object-fit: contain;
-  object-position: left top;
-  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, .08))
-}
-
-.heroTitleStack {
-  position: absolute;
-  top: 96px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  pointer-events: none;
-  z-index: 60;
-  padding: 0 18px
-}
-
-.heroTitlePorcelain {
-  position: relative;
-  z-index: 12;
-  font-family: "Bodoni Moda", serif;
-  font-weight: 200;
-  font-size: 168px;
-  letter-spacing: 12px;
-  line-height: .88;
-  text-align: center;
-  opacity: .92
-}
-
-.heroTitleSkin {
-  position: relative;
-  z-index: 12;
-  font-family: "Bodoni Moda", serif;
-  font-weight: 200;
-  font-size: 168px;
-  letter-spacing: 12px;
-  line-height: .88;
-  text-align: right;
-  padding-right: 112px;
-  margin-top: -18px;
-  opacity: .92
+  padding: 17px 18px 26px;
+  min-height: 0;
 }
 
 html,
@@ -228,12 +87,177 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* NAV */
+.topNav {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  right: 18px;
+  z-index: 90;
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.topNavGlass {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(1380px, calc(100% - 44px));
+  z-index: 999;
+}
+
+.topNavGlass .navInner {
+  background: rgba(35, 144, 194, 0.39);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.brandMark {
+  font-family: "Bodoni Moda", serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.navLinks {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.navLinks a:hover {
+  color: #000;
+}
+
+.navActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navIconBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.navIcon {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.navIconBtn:hover {
+  border-color: #000;
+}
+
+.navIconBtn:hover .navIcon {
+  fill: #000;
+}
+
+/* HERO DECOR */
+.bgOrnament {
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  width: 540px;
+  height: 340px;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.bgOrnamentImg {
+  object-fit: contain;
+  object-position: left top;
+  filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.08));
+}
+
+.ornamentalP {
+  position: absolute;
+  left: -190px;
+  top: 14px;
+  width: 900px;
+  height: 640px;
+  z-index: 8;
+  pointer-events: none;
+  opacity: 0.62;
+}
+
+.ornamentalPImg {
+  object-fit: contain;
+  object-position: left top;
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.08));
+}
+
+.heroTitleStack {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 60;
+  padding: 0 18px;
+}
+
+.heroTitlePorcelain {
+  position: relative;
+  z-index: 12;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 200;
+  font-size: 168px;
+  letter-spacing: 12px;
+  line-height: 0.88;
+  text-align: center;
+  opacity: 0.92;
+}
+
+.heroTitleSkin {
+  position: relative;
+  z-index: 12;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 200;
+  font-size: 168px;
+  letter-spacing: 12px;
+  line-height: 0.88;
+  text-align: right;
+  padding-right: 112px;
+  margin-top: -18px;
+  opacity: 0.92;
+}
+
 .heroLeftCopy {
   position: absolute;
   left: 56px;
   top: 330px;
   width: 280px;
-  z-index: 40
+  z-index: 40;
 }
 
 .heroKicker {
@@ -241,30 +265,30 @@ body::-webkit-scrollbar {
   font-weight: 300;
   font-size: 22px;
   letter-spacing: 1px;
-  opacity: .95;
-  margin-bottom: 16px
+  opacity: 0.95;
+  margin-bottom: 16px;
 }
 
 .heroBody {
   font-size: 12px;
   line-height: 1.85;
-  opacity: .9;
-  margin-bottom: 22px
+  opacity: 0.9;
+  margin-bottom: 22px;
 }
 
 .heroCta {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, .65);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   color: #fff;
   padding: 11px 18px;
   border-radius: 999px;
   font-size: 12px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .heroCta:hover {
   border-color: #000;
-  color: #000
+  color: #000;
 }
 
 .heroModelWrap {
@@ -276,87 +300,87 @@ body::-webkit-scrollbar {
   width: 600px;
   height: 520px;
   display: grid;
-  place-items: center
+  place-items: center;
 }
 
 .heroModelFrame {
   position: relative;
   width: 605px;
   height: 555px;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .heroModelImg {
   object-fit: cover;
   object-position: 50% 38%;
-  transform: scale(1.03)
+  transform: scale(1.03);
 }
 
 .productCard {
   position: absolute;
   right: 54px;
-  top: 392px;
+  top: 420px;
   width: 320px;
   border-radius: 18px;
   overflow: hidden;
   color: #1f1f1f;
-  background: rgba(255, 255, 255, .62);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, .55);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .55);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.55);
   transform: translateZ(0);
-  transition: transform .35s ease, box-shadow .35s ease;
-  z-index: 55
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 55;
 }
 
 .productCardMedia {
   position: relative;
   width: 100%;
   height: 156px;
-  background: rgba(255, 255, 255, .25)
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .productCardImg {
   object-fit: cover;
-  transition: filter .35s ease, transform .35s ease;
-  transform: translateZ(0)
+  transition: filter 0.35s ease, transform 0.35s ease;
+  transform: translateZ(0);
 }
 
 .productCardBody {
-  padding: 14px 14px 12px
+  padding: 14px 14px 12px;
 }
 
 .productCardRow {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 10px
+  gap: 10px;
 }
 
 .productCardTitle {
   font-size: 13px;
   font-weight: 600;
-  color: #1f1f1f
+  color: #1f1f1f;
 }
 
 .productCardPrice {
   font-size: 12px;
-  opacity: .85;
-  color: #1f1f1f
+  opacity: 0.85;
+  color: #1f1f1f;
 }
 
 .productCardText {
   font-size: 11px;
   line-height: 1.6;
   margin-top: 8px;
-  color: rgba(0, 0, 0, .68)
+  color: rgba(0, 0, 0, 0.68);
 }
 
 .cardDots {
   display: flex;
   gap: 6px;
-  padding: 10px 14px 14px
+  padding: 10px 14px 14px;
 }
 
 .dot {
@@ -364,43 +388,43 @@ body::-webkit-scrollbar {
   height: 8px;
   border-radius: 999px;
   border: 0;
-  background: rgba(0, 0, 0, .18);
-  cursor: pointer
+  background: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
 }
 
 .dotActive {
-  background: rgba(0, 0, 0, .45)
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .cardFadeIn {
-  animation: cardIn 520ms ease both
+  animation: cardIn 520ms ease both;
 }
 
 .cardFadeOut {
-  animation: cardOut 520ms ease both
+  animation: cardOut 520ms ease both;
 }
 
 @keyframes cardIn {
   from {
     opacity: 0;
-    transform: translateY(10px)
+    transform: translateY(10px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
 
 @keyframes cardOut {
   from {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
   }
 
   to {
     opacity: 0;
-    transform: translateY(-10px)
+    transform: translateY(-10px);
   }
 }
 
@@ -410,21 +434,18 @@ body::-webkit-scrollbar {
   background: #fff;
   padding: 26px 22px 34px;
   color: #1b1b1b;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-radius: 18px;
 }
 
 .rgGrid {
   display: grid;
   grid-template-columns: 1.05fr 1fr 1fr 1fr;
   gap: 22px;
-  align-items: start
+  align-items: start;
 }
 
 .rgIntro {
-  padding-top: 6px
+  padding-top: 6px;
 }
 
 .rgTitle {
@@ -432,26 +453,26 @@ body::-webkit-scrollbar {
   font-weight: 300;
   font-size: 34px;
   line-height: 1.05;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   color: #2c5f8a;
-  margin-bottom: 12px
+  margin-bottom: 12px;
 }
 
 .rgText {
   font-size: 11px;
   line-height: 1.7;
-  color: rgba(0, 0, 0, .55);
-  max-width: 240px
+  color: rgba(0, 0, 0, 0.55);
+  max-width: 240px;
 }
 
 .rgCard {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, .06);
-  transition: box-shadow .25s ease, transform .25s ease;
-  transform: translateZ(0)
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transform: translateZ(0);
 }
 
 .rgMedia {
@@ -459,19 +480,19 @@ body::-webkit-scrollbar {
   width: 100%;
   aspect-ratio: 1/1;
   background: #f1f2f3;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .rgImg {
   object-fit: cover;
   object-position: center 60%;
   transform: scale(1.02) translateZ(0);
-  transition: filter .25s ease, transform .25s ease
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
 .rgMeta {
   background: #fff;
-  padding: 14px 14px 16px
+  padding: 14px 14px 16px;
 }
 
 .rgRow {
@@ -479,7 +500,7 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   gap: 10px;
   align-items: baseline;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .rgName {
@@ -487,41 +508,47 @@ body::-webkit-scrollbar {
   font-weight: 600;
   color: #2d6aa0;
   line-height: 1.2;
-  max-width: 72%
+  max-width: 72%;
 }
 
 .rgPrice {
   font-size: 12px;
   font-weight: 600;
   color: #2d6aa0;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .rgDesc {
   font-size: 11px;
   line-height: 1.65;
-  color: rgba(0, 0, 0, .55)
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.rgSection {
+  background: #fff;
+  color: #1b1b1b;
+  padding: 26px 0 12px;
 }
 
 .aboutSection {
   background: #fff;
   color: #1b1b1b;
-  padding: 26px 0 8px
+  padding: 26px 0 8px;
 }
 
 .aboutGrid {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 18px;
-  align-items: stretch
+  align-items: stretch;
 }
 
 .aboutCard {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 18px;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, .06);
-  padding: 18px 18px 16px
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.06);
+  padding: 18px 18px 16px;
 }
 
 .aboutBadge {
@@ -531,9 +558,9 @@ body::-webkit-scrollbar {
   font-size: 10px;
   letter-spacing: 1.2px;
   font-weight: 600;
-  color: rgba(45, 106, 160, .92);
+  color: rgba(45, 106, 160, 0.92);
   margin-bottom: 10px;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .aboutBadge::before {
@@ -541,8 +568,8 @@ body::-webkit-scrollbar {
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: rgba(45, 106, 160, .85);
-  box-shadow: 0 10px 22px rgba(45, 106, 160, .25)
+  background: rgba(45, 106, 160, 0.85);
+  box-shadow: 0 10px 22px rgba(45, 106, 160, 0.25);
 }
 
 .aboutTitle {
@@ -550,18 +577,18 @@ body::-webkit-scrollbar {
   font-weight: 300;
   font-size: 34px;
   line-height: 1.06;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   color: #2c5f8a;
   margin-bottom: 12px;
-  max-width: 520px
+  max-width: 520px;
 }
 
 .aboutText {
   font-size: 11px;
   line-height: 1.75;
-  color: rgba(0, 0, 0, .58);
+  color: rgba(0, 0, 0, 0.58);
   max-width: 560px;
-  margin-bottom: 14px
+  margin-bottom: 14px;
 }
 
 .aboutStats {
@@ -569,87 +596,87 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin-top: 8px;
-  margin-bottom: 14px
+  margin-bottom: 14px;
 }
 
 .aboutStat {
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
   padding: 10px 10px 9px;
-  background: rgba(243, 245, 246, .7)
+  background: rgba(243, 245, 246, 0.7);
 }
 
 .aboutNum {
   font-family: "Bodoni Moda", serif;
   font-weight: 300;
   font-size: 22px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   color: #2d6aa0;
-  margin-bottom: 4px
+  margin-bottom: 4px;
 }
 
 .aboutLbl {
   font-size: 10px;
   line-height: 1.4;
-  color: rgba(0, 0, 0, .55);
-  font-weight: 500
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 500;
 }
 
 .aboutActions {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-top: 2px
+  margin-top: 2px;
 }
 
 .aboutBtn {
   background: #2d6aa0;
-  border: 1px solid rgba(45, 106, 160, .65);
+  border: 1px solid rgba(45, 106, 160, 0.65);
   color: #fff;
   padding: 10px 14px;
   border-radius: 999px;
   font-size: 11px;
   cursor: pointer;
-  box-shadow: 0 14px 34px rgba(45, 106, 160, .18)
+  box-shadow: 0 14px 34px rgba(45, 106, 160, 0.18);
 }
 
 .aboutBtn:hover {
-  filter: brightness(.97)
+  filter: brightness(0.97);
 }
 
 .aboutBtnGhost {
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, .14);
-  color: rgba(0, 0, 0, .62);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: rgba(0, 0, 0, 0.62);
   padding: 10px 14px;
   border-radius: 999px;
   font-size: 11px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .aboutBtnGhost:hover {
-  border-color: rgba(45, 106, 160, .5);
-  color: #2d6aa0
+  border-color: rgba(45, 106, 160, 0.5);
+  color: #2d6aa0;
 }
 
 .aboutMediaOnly {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .10);
-  min-height: 360px
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+  min-height: 360px;
 }
 
 .aboutImgOnly {
   object-fit: cover;
-  object-position: center
+  object-position: center;
 }
 
 .blogSection {
   background: #fff;
   color: #1b1b1b;
-  padding: 26px 0 12px
+  padding: 26px 0 12px;
 }
 
 .blogHero {
@@ -658,28 +685,29 @@ body::-webkit-scrollbar {
   border-radius: 18px;
   overflow: hidden;
   height: 290px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .10);
-  background: #9bb4b7
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+  background: #9bb4b7;
 }
 
 .blogHeroMedia {
   position: absolute;
   inset: 0;
-  z-index: 0
+  z-index: 0;
 }
 
 .blogHeroImg {
   object-fit: cover;
   object-position: center;
-  transform: scale(1.02)
+  transform: scale(1.02);
 }
 
 .blogHeroOverlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0) 60%), linear-gradient(0deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, 0) 70%)
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0) 70%);
 }
 
 .blogHeroSwirl {
@@ -688,14 +716,14 @@ body::-webkit-scrollbar {
   top: -90px;
   width: 360px;
   height: 260px;
-  opacity: .20;
+  opacity: 0.2;
   pointer-events: none;
-  z-index: 2
+  z-index: 2;
 }
 
 .blogHeroSwirlImg {
   object-fit: contain;
-  object-position: left top
+  object-position: left top;
 }
 
 .blogHeroTitle {
@@ -707,9 +735,9 @@ body::-webkit-scrollbar {
   font-weight: 200;
   font-size: 92px;
   letter-spacing: 10px;
-  line-height: .9;
-  color: rgba(255, 255, 255, .92);
-  text-shadow: 0 12px 40px rgba(0, 0, 0, .20)
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .blogHeroText {
@@ -721,7 +749,7 @@ body::-webkit-scrollbar {
   width: 320px;
   font-size: 11px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, .88)
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .blogGrid {
@@ -729,30 +757,30 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  align-items: stretch
+  align-items: stretch;
 }
 
 .blogCard {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, .06);
-  transition: box-shadow .25s ease, transform .25s ease;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
   display: grid;
   grid-template-rows: auto 1fr;
-  transform: translateZ(0)
+  transform: translateZ(0);
 }
 
 .blogCard:hover {
-  box-shadow: 0 22px 60px rgba(0, 0, 0, .10)
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.1);
 }
 
 .blogMeta {
   padding: 14px 14px 14px;
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 8px;
 }
 
 .blogPill {
@@ -760,53 +788,53 @@ body::-webkit-scrollbar {
   width: fit-content;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(45, 106, 160, .10);
-  border: 1px solid rgba(45, 106, 160, .16);
+  background: rgba(45, 106, 160, 0.1);
+  border: 1px solid rgba(45, 106, 160, 0.16);
   font-size: 10px;
   letter-spacing: 1px;
   font-weight: 700;
-  color: rgba(45, 106, 160, .92);
-  text-transform: uppercase
+  color: rgba(45, 106, 160, 0.92);
+  text-transform: uppercase;
 }
 
 .blogName {
   font-size: 12px;
   font-weight: 700;
   color: #2d6aa0;
-  line-height: 1.25
+  line-height: 1.25;
 }
 
 .blogDesc {
   font-size: 11px;
   line-height: 1.65;
-  color: rgba(0, 0, 0, .55);
-  margin-top: 2px
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 2px;
 }
 
 .blogLinkRow {
   margin-top: auto;
-  padding-top: 6px
+  padding-top: 6px;
 }
 
 .blogLinkBtn {
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, .12);
-  color: rgba(0, 0, 0, .62);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.62);
   padding: 9px 12px;
   border-radius: 999px;
   font-size: 11px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .blogLinkBtn:hover {
-  border-color: rgba(45, 106, 160, .5);
-  color: #2d6aa0
+  border-color: rgba(45, 106, 160, 0.5);
+  color: #2d6aa0;
 }
 
 .bodyCare {
   background: #fff;
   color: #1b1b1b;
-  padding: 22px 0 26px
+  padding: 22px 0 26px;
 }
 
 .bodyHero {
@@ -815,24 +843,25 @@ body::-webkit-scrollbar {
   border-radius: 18px;
   overflow: hidden;
   height: 290px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .10)
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
 }
 
 .bodyHeroMedia {
   position: absolute;
-  inset: 0
+  inset: 0;
 }
 
 .bodyHeroImg {
   object-fit: cover;
-  object-position: center
+  object-position: center;
 }
 
 .bodyHeroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0) 58%), linear-gradient(0deg, rgba(0, 0, 0, .12), rgba(0, 0, 0, 0) 65%)
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0) 58%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0) 65%);
 }
 
 .bodyHeroSwirl {
@@ -841,13 +870,13 @@ body::-webkit-scrollbar {
   top: -90px;
   width: 360px;
   height: 260px;
-  opacity: .55;
-  pointer-events: none
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .bodyHeroSwirlImg {
   object-fit: contain;
-  object-position: left top
+  object-position: left top;
 }
 
 .bodyHeroTitle {
@@ -859,9 +888,9 @@ body::-webkit-scrollbar {
   font-weight: 200;
   font-size: 96px;
   letter-spacing: 10px;
-  line-height: .9;
-  color: rgba(255, 255, 255, .92);
-  text-shadow: 0 12px 40px rgba(0, 0, 0, .20)
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .bodyHeroText {
@@ -872,24 +901,24 @@ body::-webkit-scrollbar {
   width: 290px;
   font-size: 11px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, .88)
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .bodyGrid {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px
+  gap: 18px;
 }
 
 .bodyCard {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, .06);
-  transition: box-shadow .25s ease, transform .25s ease;
-  transform: translateZ(0)
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transform: translateZ(0);
 }
 
 .bodyCardMedia {
@@ -897,18 +926,18 @@ body::-webkit-scrollbar {
   width: 100%;
   aspect-ratio: 1/1;
   background: #f1f2f3;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .bodyCardImg {
   object-fit: cover;
   object-position: center 60%;
   transform: scale(1.02) translateZ(0);
-  transition: filter .25s ease, transform .25s ease
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
 .bodyMeta {
-  padding: 14px 14px 16px
+  padding: 14px 14px 16px;
 }
 
 .bodyRow {
@@ -916,7 +945,7 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   gap: 10px;
   align-items: baseline;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .bodyName {
@@ -924,26 +953,26 @@ body::-webkit-scrollbar {
   font-weight: 600;
   color: #2d6aa0;
   line-height: 1.2;
-  max-width: 72%
+  max-width: 72%;
 }
 
 .bodyPrice {
   font-size: 12px;
   font-weight: 600;
   color: #2d6aa0;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .bodyDesc {
   font-size: 11px;
   line-height: 1.65;
-  color: rgba(0, 0, 0, .55)
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .handCare {
   background: #fff;
   color: #1b1b1b;
-  padding: 22px 0 0
+  padding: 22px 0 0;
 }
 
 .handHero {
@@ -952,25 +981,26 @@ body::-webkit-scrollbar {
   border-radius: 18px;
   overflow: hidden;
   height: 320px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .10);
-  background: #9bb4b7
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+  background: #9bb4b7;
 }
 
 .handHeroMedia {
   position: absolute;
-  inset: 0
+  inset: 0;
 }
 
 .handHeroImg {
   object-fit: cover;
-  object-position: center
+  object-position: center;
 }
 
 .handHeroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .14), rgba(0, 0, 0, 0) 56%), linear-gradient(0deg, rgba(0, 0, 0, .08), rgba(0, 0, 0, 0) 70%)
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0) 56%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0) 70%);
 }
 
 .handHeroTitle {
@@ -981,9 +1011,9 @@ body::-webkit-scrollbar {
   font-weight: 200;
   font-size: 92px;
   letter-spacing: 10px;
-  line-height: .9;
-  color: rgba(255, 255, 255, .92);
-  text-shadow: 0 12px 40px rgba(0, 0, 0, .20)
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .handHeroText {
@@ -993,7 +1023,7 @@ body::-webkit-scrollbar {
   width: 330px;
   font-size: 11px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, .88)
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .handGrid {
@@ -1004,17 +1034,17 @@ body::-webkit-scrollbar {
   gap: 18px;
   justify-content: start;
   align-items: stretch;
-  max-width: 720px
+  max-width: 720px;
 }
 
 .handCard {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .07);
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, .06);
-  transition: box-shadow .25s ease, transform .25s ease;
-  transform: translateZ(0)
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transform: translateZ(0);
 }
 
 .handCardMedia {
@@ -1022,18 +1052,18 @@ body::-webkit-scrollbar {
   width: 100%;
   aspect-ratio: 1/1;
   background: #f1f2f3;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .handCardImg {
   object-fit: cover;
   object-position: center 60%;
   transform: scale(1.02) translateZ(0);
-  transition: filter .25s ease, transform .25s ease
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
 .handMeta {
-  padding: 14px 14px 16px
+  padding: 14px 14px 16px;
 }
 
 .handRow {
@@ -1041,7 +1071,7 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   gap: 10px;
   align-items: baseline;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .handName {
@@ -1049,20 +1079,20 @@ body::-webkit-scrollbar {
   font-weight: 600;
   color: #2d6aa0;
   line-height: 1.2;
-  max-width: 72%
+  max-width: 72%;
 }
 
 .handPrice {
   font-size: 12px;
   font-weight: 600;
   color: #2d6aa0;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .handDesc {
   font-size: 11px;
   line-height: 1.65;
-  color: rgba(0, 0, 0, .55)
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .psFooter {
@@ -1070,12 +1100,31 @@ body::-webkit-scrollbar {
   background: #f3f5f6;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .06)
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .psFooterInner {
   position: relative;
-  padding: 22px 18px 14px
+  padding: 22px 18px 14px;
+  overflow: hidden;
+}
+
+.psFooterInner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("/font.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+  filter: contrast(1.05);
+  transform: scale(1.02);
 }
 
 .psFooterBg {
@@ -1084,13 +1133,14 @@ body::-webkit-scrollbar {
   bottom: -160px;
   width: 520px;
   height: 420px;
-  opacity: .22;
-  pointer-events: none
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .psFooterBgImg {
   object-fit: contain;
-  object-position: left bottom
+  object-position: left bottom;
 }
 
 .psFooterGrid {
@@ -1100,12 +1150,24 @@ body::-webkit-scrollbar {
   grid-template-columns: 1.25fr 1fr 1fr 1fr;
   gap: 22px;
   align-items: start;
-  border: 0
+  border: 0;
 }
 
 .psFooterBrand {
-  padding-right: 6px
+  padding-right: 6px;
 }
+
+.pAltSm2 {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 1;
+  transform: translateY(7px);
+  margin-right: -8px;
+  font-size: 1.25em;
+  letter-spacing: 0;
+}
+
 
 .psFooterLogo {
   font-family: "Bodoni Moda", serif;
@@ -1113,71 +1175,71 @@ body::-webkit-scrollbar {
   letter-spacing: 2px;
   font-size: 18px;
   color: #2c5f8a;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .psFooterContact {
   font-size: 10px;
   line-height: 1.8;
-  color: rgba(0, 0, 0, .55);
-  margin-bottom: 10px
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 10px;
 }
 
 .psFooterLabel {
   font-weight: 600;
-  color: rgba(0, 0, 0, .65);
-  margin-bottom: 2px
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 2px;
 }
 
 .psFooterLine {
-  color: rgba(0, 0, 0, .55)
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .psFooterSocial {
   display: flex;
   gap: 10px;
-  align-items: center
+  align-items: center;
 }
 
 .psFooterIco {
   width: 28px;
   height: 28px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, .10);
-  background: rgba(255, 255, 255, .65);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.65);
   display: grid;
   place-items: center;
-  transition: transform .2s ease, box-shadow .2s ease
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .psFooterIco svg {
   width: 14px;
   height: 14px;
-  fill: rgba(0, 0, 0, .55)
+  fill: rgba(0, 0, 0, 0.55);
 }
 
 .psFooterIco:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .08)
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .psFooterHead {
   font-size: 11px;
   font-weight: 700;
-  color: rgba(0, 0, 0, .65);
-  margin-bottom: 10px
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 10px;
 }
 
 .psFooterLink {
   display: block;
   text-decoration: none;
   font-size: 10px;
-  color: rgba(0, 0, 0, .55);
-  margin: 0 0 7px
+  color: rgba(0, 0, 0, 0.55);
+  margin: 0 0 7px;
 }
 
 .psFooterLink:hover {
-  color: #2c5f8a
+  color: #2c5f8a;
 }
 
 .psFooterBottom {
@@ -1185,10 +1247,10 @@ body::-webkit-scrollbar {
   z-index: 2;
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px solid rgba(0, 0, 0, .06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   font-size: 10px;
-  color: rgba(0, 0, 0, .45);
-  text-align: center
+  color: rgba(0, 0, 0, 0.45);
+  text-align: center;
 }
 
 .productCard,
@@ -1196,32 +1258,32 @@ body::-webkit-scrollbar {
 .blogCard,
 .bodyCard,
 .handCard {
-  will-change: transform
+  will-change: transform;
 }
 
-@media (hover:hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   .productCard:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, .22), inset 0 1px 0 rgba(255, 255, 255, .65)
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.65);
   }
 
   .productCard:hover .productCardImg {
-    filter: grayscale(1) brightness(.88) contrast(1.05);
-    transform: scale(1.03) translateZ(0)
+    filter: grayscale(1) brightness(0.88) contrast(1.05);
+    transform: scale(1.03) translateZ(0);
   }
 
   .rgCard:hover,
   .blogCard:hover,
   .bodyCard:hover,
   .handCard:hover {
-    transform: translateY(-4px) scale(1.02)
+    transform: translateY(-4px) scale(1.02);
   }
 
   .rgCard:hover .rgImg,
   .bodyCard:hover .bodyCardImg,
   .handCard:hover .handCardImg {
-    filter: grayscale(1) brightness(.88) contrast(1.05);
-    transform: scale(1.05) translateZ(0)
+    filter: grayscale(1) brightness(0.88) contrast(1.05);
+    transform: scale(1.05) translateZ(0);
   }
 }
 
@@ -1232,110 +1294,110 @@ body::-webkit-scrollbar {
   .blogCard,
   .bodyCard,
   .handCard {
-    transition: none !important
+    transition: none !important;
   }
 
   .productCardImg,
   .rgImg,
   .bodyCardImg,
   .handCardImg {
-    transition: none !important
+    transition: none !important;
   }
 
   .cardFadeIn,
   .cardFadeOut {
-    animation: none !important
+    animation: none !important;
   }
 }
 
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
 
   .heroTitlePorcelain,
   .heroTitleSkin {
     font-size: 132px;
-    letter-spacing: 10px
+    letter-spacing: 10px;
   }
 
   .heroTitleSkin {
-    padding-right: 70px
+    padding-right: 70px;
   }
 
   .heroModelWrap {
-    width: 520px
+    width: 520px;
   }
 
   .heroModelFrame {
     width: 520px;
-    height: 500px
+    height: 500px;
   }
 
   .productCard {
-    right: 34px
+    right: 34px;
   }
 
   .rgGrid {
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .rgIntro {
-    grid-column: 1/-1
+    grid-column: 1 / -1;
   }
 
   .rgText {
-    max-width: 560px
+    max-width: 560px;
   }
 
   .aboutGrid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .aboutMediaOnly {
-    min-height: 320px
+    min-height: 320px;
   }
 
   .blogGrid {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .blogHeroTitle {
     font-size: 76px;
-    letter-spacing: 8px
+    letter-spacing: 8px;
   }
 
   .blogHeroText {
-    width: 300px
+    width: 300px;
   }
 
   .bodyGrid {
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .handHeroTitle {
     font-size: 76px;
-    letter-spacing: 8px
+    letter-spacing: 8px;
   }
 
   .psFooterGrid {
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width:860px) {
+@media (max-width: 860px) {
   .navLinks {
-    display: none
+    display: none;
   }
 
   .heroFrameInner {
-    padding-bottom: 18px
+    padding-bottom: 18px;
   }
 
   .heroTitleStack {
-    top: 88px
+    top: 88px;
   }
 
   .heroTitlePorcelain {
     font-size: 92px;
-    letter-spacing: 8px
+    letter-spacing: 8px;
   }
 
   .heroTitleSkin {
@@ -1343,7 +1405,7 @@ body::-webkit-scrollbar {
     letter-spacing: 8px;
     padding-right: 16px;
     text-align: center;
-    margin-top: -10px
+    margin-top: -10px;
   }
 
   .heroLeftCopy {
@@ -1352,7 +1414,7 @@ body::-webkit-scrollbar {
     top: auto;
     width: auto;
     max-width: 420px;
-    margin: 220px 0 10px 10px
+    margin: 220px 0 10px 10px;
   }
 
   .heroModelWrap {
@@ -1363,70 +1425,70 @@ body::-webkit-scrollbar {
     width: 100%;
     height: auto;
     margin: 10px 0 0;
-    justify-content: center
+    justify-content: center;
   }
 
   .heroModelFrame {
     width: min(520px, 100%);
-    height: 460px
+    height: 460px;
   }
 
   .productCard {
     position: relative;
     right: auto;
     top: auto;
-    margin: 12px 10px 0
+    margin: 12px 10px 0;
   }
 
   .rgInside {
     margin-top: 22px;
-    border-radius: 18px
+    border-radius: 18px;
   }
 
   .rgGrid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .bodyHeroTitle {
     font-size: 58px;
-    letter-spacing: 6px
+    letter-spacing: 6px;
   }
 
   .bodyGrid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .aboutSection {
-    padding: 18px 0 8px
+    padding: 18px 0 8px;
   }
 
   .aboutTitle {
-    font-size: 28px
+    font-size: 28px;
   }
 
   .aboutStats {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .aboutActions {
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
   }
 
   .aboutBtn,
   .aboutBtnGhost {
-    width: 100%
+    width: 100%;
   }
 
   .blogHero {
-    height: 320px
+    height: 320px;
   }
 
   .blogHeroTitle {
     left: 16px;
     top: 28px;
     font-size: 56px;
-    letter-spacing: 6px
+    letter-spacing: 6px;
   }
 
   .blogHeroText {
@@ -1435,167 +1497,123 @@ body::-webkit-scrollbar {
     top: 150px;
     transform: none;
     width: 250px;
-    font-size: 10.5px
+    font-size: 10.5px;
   }
 
   .blogGrid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .handHero {
-    height: 320px
+    height: 320px;
   }
 
   .handHeroTitle {
     left: 16px;
     top: 32px;
     font-size: 56px;
-    letter-spacing: 6px
+    letter-spacing: 6px;
   }
 
   .handHeroText {
     left: 16px;
     top: 150px;
     width: 250px;
-    font-size: 10.5px
+    font-size: 10.5px;
   }
 
   .handGrid {
     grid-template-columns: 1fr;
-    max-width: 100%
+    max-width: 100%;
   }
 
   .psFooterGrid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 }
 
-.topNav {
-  position: absolute;
-  top: 12px;
-  left: 18px;
-  right: 18px;
-  z-index: 90;
-  /* transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease, -webkit-backdrop-filter .25s ease */
-}
-
-.navInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px
-}
-
-.topNavGlass {
-  position: fixed;
-  top: 14px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  width: min(1380px, calc(100% - 44px));
-  z-index: 999
-}
-
-.topNavGlass .navInner {
-  background: rgba(35, 144, 194, 0.39);
-  border: 1px solid rgba(255, 255, 255, .22);
-  box-shadow: 0 16px 50px rgba(0, 0, 0, .14);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 999px;
-  padding: 10px 14px
-}
-
-@media (max-width:480px) {
-
+@media (max-width: 480px) {
   .heroTitleStack {
     top: 72px;
-    padding: 0 1px
+    padding: 0 1px;
   }
 
   .heroTitlePorcelain {
     font-size: 50px;
     letter-spacing: 4px;
-    line-height: .95;
-    text-align: center
+    line-height: 0.95;
+    text-align: center;
   }
 
   .heroTitleSkin {
     font-size: 56px;
     letter-spacing: 4px;
-    line-height: .95;
+    line-height: 0.95;
     text-align: center;
     padding-right: 0;
-    margin-top: -6px
+    margin-top: -6px;
   }
 
   .heroLeftCopy {
     margin: 150px 12px 8px;
-    max-width: 100%
+    max-width: 100%;
   }
 
   .heroKicker {
     font-size: 16px;
     line-height: 1.25;
-    margin-bottom: 12px
+    margin-bottom: 12px;
   }
 
   .heroBody {
     font-size: 11px;
     line-height: 1.6;
-    margin-bottom: 14px
+    margin-bottom: 14px;
   }
 
   .heroCta {
     font-size: 11px;
-    padding: 10px 14px
+    padding: 10px 14px;
   }
 
   .heroModelFrame {
-    height: 380px
+    height: 380px;
   }
 
-}
-
-@media (max-width:480px) {
   .heroModelWrap {
-    display: none
+    display: none;
   }
-}
-
-@media (max-width:480px) {
 
   .productCard {
     width: 88%;
     margin: 10px auto 0;
-    border-radius: 14px
+    border-radius: 14px;
   }
 
   .productCardMedia {
-    height: 110px
+    height: 110px;
   }
 
   .productCardBody {
-    padding: 10px
+    padding: 10px;
   }
 
   .productCardTitle {
-    font-size: 11px
+    font-size: 11px;
   }
 
   .productCardPrice {
-    font-size: 10px
+    font-size: 10px;
   }
 
   .productCardText {
     font-size: 9.5px;
-    line-height: 1.45
+    line-height: 1.45;
   }
 
   .cardDots {
-    padding: 6px 10px 10px
+    padding: 6px 10px 10px;
   }
-
 }
 
 .psLoadWrap {
@@ -1637,8 +1655,8 @@ body::-webkit-scrollbar {
   width: min(420px, calc(100% - 44px));
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.10);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.20);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.2);
   padding: 26px 22px 20px;
   text-align: center;
 }
@@ -1669,8 +1687,90 @@ body::-webkit-scrollbar {
 }
 
 .psLoaderText {
-  font-size: 11px;
+  font-size: 29px;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
+}
+
+.pAltHero {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(2px);
+  margin-right: -18px;
+  font-size: 1.25em;
+  letter-spacing: 0;
+}
+
+.pAltSm {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(2px);
+  margin-right: -6px;
+  font-size: 1.35em;
+  letter-spacing: 0;
+}
+
+.pAltSm2 {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(7px);
+  margin-right: -8px;
+  font-size: 1.25em;
+  letter-spacing: 0;
+}
+
+.pAlt {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(6px);
+  margin-right: -10px;
+  font-size: 1.5em;
+  letter-spacing: 0;
+}
+
+
+@media (max-width: 480px) {
+  .bodyHero {
+    height: 330px;
+  }
+
+  .bodyHeroOverlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, .32), rgba(0, 0, 0, 0) 62%),
+      linear-gradient(0deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0) 70%);
+  }
+
+  .bodyHeroTitle {
+    left: 14px;
+    top: 34px;
+    transform: none;
+    font-size: 54px;
+    letter-spacing: 6px;
+    line-height: .9;
+    max-width: 92%;
+    word-break: keep-all;
+  }
+
+  .bodyHeroText {
+    left: 14px;
+    right: auto;
+    top: 140px;
+    transform: none;
+    width: min(260px, 88%);
+    font-size: 10.5px;
+    line-height: 1.65;
+  }
+
+  .bodyHeroSwirl {
+    opacity: 0.22;
+    left: -120px;
+    top: -120px;
+    width: 320px;
+    height: 240px;
+  }
 }
